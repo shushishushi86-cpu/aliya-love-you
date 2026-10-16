@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff6f91">
+<title>For My Aliya 💖</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;overflow-x:hidden;font-family:Poppins,sans-serif;color:#57313d;background:radial-gradient(circle at 20% 20%,#ffd2df80,transparent 30%),radial-gradient(circle at 80% 80%,#ffe0e980,transparent 30%),linear-gradient(135deg,#fff1f5,#ffe1ea,#fff8fa)}
+.page{min-height:100vh;width:100%;display:none;position:relative;z-index:5;padding:25px 18px;align-items:center;justify-content:center}.page.active{display:flex;animation:in .8s ease}
+@keyframes in{from{opacity:0;transform:scale(.96) translateY(15px)}to{opacity:1;transform:none}}
+.petal,.heart{position:fixed;pointer-events:none;z-index:2}.petal{top:-30px;animation:fall linear infinite;opacity:.8}@keyframes fall{0%{transform:translateY(-40px) rotate(0);opacity:0}15%{opacity:.9}100%{transform:translateY(110vh) translateX(120px) rotate(420deg);opacity:0}}
+.heart{bottom:-30px;animation:float linear forwards}@keyframes float{0%{transform:translateY(0) scale(.5);opacity:0}15%{opacity:1}100%{transform:translateY(-110vh) translateX(var(--x)) scale(1.3);opacity:0}}
+.landing{text-align:center;flex-direction:column}.small{font-size:13px;letter-spacing:3px;color:#a85a70;margin-bottom:12px}.landing h1,h2{font-family:'Dancing Script',cursive;color:#b8325b}.landing h1{font-size:clamp(44px,12vw,78px)}.landing p{font-size:15px;opacity:.75;margin:5px 0 35px}
+.envelope{width:min(330px,82vw);height:220px;position:relative;cursor:pointer;filter:drop-shadow(0 20px 25px #96304d33);transition:.5s}.envelope:hover{transform:translateY(-8px)}.env-back{position:absolute;inset:0;background:#ffb6c9;border-radius:12px}.env-left,.env-right{position:absolute;bottom:0;width:0;height:0;border-bottom:110px solid #ff91ad}.env-left{left:0;border-right:165px solid transparent}.env-right{right:0;border-left:165px solid transparent}.env-front{position:absolute;bottom:0;left:0;width:100%;height:115px;background:#ffabc0;clip-path:polygon(0 0,50% 65%,100% 0,100% 100%,0 100%);border-radius:0 0 12px 12px}.env-flap{position:absolute;top:0;left:0;width:100%;height:125px;background:#ffcada;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:1s;z-index:4}.envelope.open .env-flap{transform:rotateX(180deg)}.letter-mini{position:absolute;z-index:2;width:82%;height:170px;left:9%;top:22px;background:#fffdf7;border-radius:7px;padding:25px 10px;color:#bd5270;font:25px 'Dancing Script',cursive;transition:1s}.envelope.open .letter-mini{transform:translateY(-105px)}
+.tap,.next{border:0;background:linear-gradient(135deg,#ff6f91,#c94169);color:#fff;padding:13px 27px;border-radius:50px;cursor:pointer;font-size:14px;box-shadow:0 10px 25px #be325933;transition:.3s}.tap{margin-top:28px;animation:pulse 1.8s infinite}@keyframes pulse{50%{transform:scale(1.05)}}.next:hover{transform:translateY(-3px)}
+.content,.wedding-card{width:min(920px,100%);text-align:center}.badge{display:inline-block;padding:7px 16px;border-radius:30px;background:#fff;color:#cc5776;box-shadow:0 7px 20px #b446641f;font-size:12px;margin-bottom:14px}h2{font-size:clamp(42px,10vw,70px)}.subtitle{opacity:.7;margin:5px auto 25px}
+.avatar-frame{margin:30px auto;display:flex;justify-content:center;align-items:center;gap:18px}.avatar{width:125px;height:145px;border-radius:65px 65px 35px 35px;background:linear-gradient(#fff,#ffe5ec);border:5px solid #fff;box-shadow:0 12px 30px #aa325e2e;display:flex;align-items:center;justify-content:center;font-size:75px}.avatar:nth-child(2){transform:translateY(-12px)}.heart-between{font-size:35px;animation:beat 1.2s infinite}@keyframes beat{50%{transform:scale(1.25)}}
+.letter{max-width:700px;margin:auto;background:#ffffffdc;backdrop-filter:blur(10px);padding:35px 25px;border-radius:25px;box-shadow:0 20px 50px #a032501f;text-align:left}.letter p{line-height:1.9;font-size:15px;margin-bottom:14px}.highlight{color:#d7446b;font-weight:600}.signature{text-align:right;font:27px 'Dancing Script',cursive;color:#c73d62;margin-top:20px}
+.music{position:fixed;top:15px;right:15px;z-index:50;border:0;width:48px;height:48px;border-radius:50%;background:#fff;box-shadow:0 7px 20px #82284633;cursor:pointer;font-size:21px}
+.wedding-card{background:#ffffffcc;backdrop-filter:blur(12px);border-radius:30px;padding:25px 18px 35px;box-shadow:0 20px 60px #8c28451f}.love-note{max-width:650px;margin:15px auto;line-height:1.8;opacity:.78}
+.couple-scene{width:100%;max-width:650px;height:360px;margin:25px auto;border-radius:25px;overflow:hidden;position:relative;background:linear-gradient(#ffdce7 0%,#fff0f4 65%,#d6a77c 66%,#b8845c 100%)}.moon{position:absolute;width:65px;height:65px;border-radius:50%;background:#fff;right:50px;top:30px;box-shadow:0 0 30px #fff}
+.boy,.girl{position:absolute;bottom:25px;width:125px;height:225px;animation:walk 4s ease-in-out infinite alternate}.boy{left:32%}.girl{right:26%}@keyframes walk{to{transform:translateX(8px) rotate(1deg)}}
+.head{position:absolute;width:68px;height:68px;background:#c98261;border-radius:50%;left:29px;top:0;z-index:3}.hair,.girl-hair{position:absolute;background:#17131a;z-index:4}.hair{width:72px;height:35px;border-radius:50% 50% 25% 25%;top:-5px;left:27px}.suit{position:absolute;top:60px;left:12px;width:100px;height:155px;background:#17151a;border-radius:25px 25px 10px 10px}.shirt{position:absolute;left:50px;top:60px;width:35px;height:100px;background:#fff;clip-path:polygon(50% 0,100% 100%,0 100%)}.tie{position:absolute;left:60px;top:68px;width:15px;height:60px;background:#aa3456;clip-path:polygon(50% 0,100% 20%,70% 100%,30% 100%,0 20%)}.leg1,.leg2,.gleg1,.gleg2{position:absolute;width:25px;height:80px;top:195px}.leg1,.leg2{background:#111}.leg1{left:38px}.leg2{right:38px}
+.girl-hair{left:20px;top:-7px;width:88px;height:115px;border-radius:50px}.girl .head{left:29px;background:#c98261}.saree{position:absolute;top:60px;left:4px;width:115px;height:160px;background:linear-gradient(135deg,#d84870,#8e274a);clip-path:polygon(20% 0,80% 0,100% 100%,0 100%);border-radius:20px}.saree-border{position:absolute;top:70px;left:5px;width:110px;height:15px;background:#ffd36b;z-index:3}.gleg1,.gleg2{background:#5a2032}.gleg1{left:37px}.gleg2{right:35px}.hand-hold{position:absolute;width:65px;height:18px;background:#c98261;left:44%;top:215px;border-radius:20px;transform:rotate(-12deg);z-index:8}
+.wedding-text{font:32px 'Dancing Script',cursive;color:#b93660;margin-top:10px}.final{text-align:center}.final-heart{font-size:85px;animation:beat 1.3s infinite}.final p{max-width:600px;line-height:1.9;margin:15px auto 25px}.footer{font-size:12px;opacity:.55}
+@media(max-width:600px){.envelope{height:190px}.env-left{border-right-width:135px;border-bottom-width:95px}.env-right{border-left-width:135px;border-bottom-width:95px}.letter{padding:28px 18px}.letter p{font-size:14px}.avatar{width:100px;height:120px;font-size:58px}.couple-scene{height:300px}.boy{left:22%;transform:scale(.8);transform-origin:bottom}.girl{right:15%;transform:scale(.8);transform-origin:bottom}.hand-hold{left:42%;top:210px;transform:scale(.8) rotate(-12deg)}}
+</style>
+</head>
+<body>
+<button class="music" id="musicBtn" onclick="toggleMusic()">🎵</button>
+
+<section class="page active landing" id="page1">
+<div class="small">A LITTLE SURPRISE FOR YOU</div>
+<h1>For My Aliya 💖</h1>
+<p>There is something special waiting inside...</p>
+<div class="envelope" id="envelope" onclick="openEnvelope()">
+<div class="env-back"></div><div class="letter-mini">To My<br><b>Jannatul Aliya</b> 💕</div>
+<div class="env-left"></div><div class="env-right"></div><div class="env-front"></div><div class="env-flap"></div>
+</div>
+<button class="tap" onclick="openEnvelope()">💌 Tap To Open</button>
+</section>
+
+<section class="page" id="page2">
+<div class="content">
+<div class="badge">A LETTER FROM MY HEART 💗</div>
+<h2>My Dear Aliya</h2>
+<p class="subtitle">Some feelings are too beautiful to explain...</p>
+<div class="avatar-frame"><div class="avatar">🧑🏻‍💼</div><div class="heart-between">💗</div><div class="avatar">👩🏻‍🦰</div></div>
+<div class="letter">
+<p><span class="highlight">I love you so much, Aliya 😘💖</span></p>
+<p>Jannatul Aliya, তুমি আমার জীবনের এমন একজন মানুষ যাকে শুধু ভালোবাসি বললে আমার মনের কথাটা পুরো বলা হয় না। তুমি আমার কাছে খুবই special, precious এবং খুব আপন একজন মানুষ।</p>
+<p>আমার <span class="highlight">পাখি</span> 🐦💗, তোমার সাথে কথা বললে আমার মনটা ভালো হয়ে যায়। তোমার একটা ছোট্ট হাসিও আমার পুরো দিনটাকে সুন্দর করে দিতে পারে।</p>
+<p>আমি চাই আমাদের ছোট ছোট মুহূর্তগুলো অনেকদিন মনে থাকুক—হাসি, অভিমান, মিষ্টি ঝগড়া, random কথা আর একসাথে কাটানো প্রতিটা সুন্দর মুহূর্ত। 🌸</p>
+<p>তুমি perfect হওয়ার জন্য special নও। তুমি <span class="highlight">তুমি বলেই special</span>। তোমার personality, তোমার হাসি, তোমার কথা বলার ধরন—সবকিছু মিলিয়েই তুমি আমার কাছে আমার Aliya। 💕</p>
+<p>আর একটা কথা মনে রেখো পাখি—<b>তোমাকে ভালোবাসার জন্য আমার কোনো special day লাগে না।</b> প্রতিটা দিনই তোমাকে নতুন করে ভালোবাসার একটা কারণ খুঁজে নেব। 🌷</p>
+<div class="signature">Always yours,<br>তোমার মানুষটা ❤️</div>
+</div>
+<br><button class="next" onclick="goTo(3)">💍 One More Surprise →</button>
+</div>
+</section>
+
+<section class="page" id="page3">
+<div class="wedding-card">
+<div class="badge">A LITTLE DREAM 💍</div>
+<h2>Our Little Fairytale</h2>
+<p class="love-note">Imagine a beautiful evening... তুমি সুন্দর একটা wedding saree পরে আছো, আর আমি black wedding suit পরে তোমার হাত ধরে ধীরে ধীরে তোমার সাথে হাঁটছি। 🌙❤️</p>
+<div class="couple-scene">
+<div class="moon"></div>
+<div class="boy"><div class="head"></div><div class="hair"></div><div class="suit"></div><div class="shirt"></div><div class="tie"></div><div class="leg1"></div><div class="leg2"></div></div>
+<div class="girl"><div class="girl-hair"></div><div class="head"></div><div class="saree"></div><div class="saree-border"></div><div class="gleg1"></div><div class="gleg2"></div></div>
+<div class="hand-hold"></div>
+</div>
+<div class="wedding-text">Hand in hand, heart to heart... 💗</div>
+<p class="love-note">পৃথিবীর সবকিছু বদলে গেলেও, এই ছোট্ট স্বপ্নটা আমার কাছে সবসময় সুন্দর থাকবে—তোমার হাতটা ধরে তোমার পাশে হাঁটা। 🥹❤️</p>
+<button class="next" onclick="goTo(4)">💖 Last Surprise</button>
+</div>
+</section>
+
+<section class="page final" id="page4">
+<div class="content">
+<div class="final-heart">💖</div><h2>Forever & Always</h2>
+<p>Aliya, যদি কখনো তোমার মনে হয় তুমি একা, তাহলে মনে রেখো—এই পৃথিবীর কোথাও একজন মানুষ আছে যে তোমার হাসিটাকে খুব মূল্য দেয়। 🌸</p>
+<p>তুমি আমার জীবনের একটা সুন্দর chapter না, তুমি এমন একটা গল্প যার প্রতিটা page আমি যত্ন করে মনে রাখতে চাই। 💕</p>
+<p><b>I love you, my Aliya. 😘💖<br>Stay happy, stay safe, my little pakhi. 🐦💕</b></p>
+<button class="next" onclick="heartExplosion()">💕 Send Love</button>
+<div class="footer">Made with love, just for Jannatul Aliya ✨</div>
+</div>
+</section>
+
+<script>
+function goTo(n){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById('page'+n).classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'}); hearts();
+}
+let opened=false;
+function openEnvelope(){
+ if(opened)return; opened=true;
+ document.getElementById('envelope').classList.add('open');
+ setTimeout(()=>goTo(2),1200); hearts();
+}
+const petals=['🌸','🌷','💮','🌺','✿'];
+function petal(){
+ const e=document.createElement('div');e.className='petal';
+ e.textContent=petals[Math.floor(Math.random()*petals.length)];
+ e.style.left=Math.random()*100+'vw';e.style.fontSize=10+Math.random()*16+'px';
+ e.style.animationDuration=5+Math.random()*7+'s';document.body.appendChild(e);
+ setTimeout(()=>e.remove(),13000);
+}
+setInterval(petal,450);
+function heart(){
+ const e=document.createElement('div');e.className='heart';
+ e.textContent=['💗','💕','💖','💓','💞','❤️'][Math.floor(Math.random()*6)];
+ e.style.left=Math.random()*100+'vw';e.style.fontSize=12+Math.random()*20+'px';
+ e.style.setProperty('--x',(Math.random()*160-80)+'px');
+ e.style.animationDuration=4+Math.random()*5+'s';document.body.appendChild(e);
+ setTimeout(()=>e.remove(),10000);
+}
+function hearts(){for(let i=0;i<18;i++)setTimeout(heart,i*100)}
+setInterval(heart,900);
+function heartExplosion(){
+ for(let i=0;i<70;i++)setTimeout(()=>{
+  const e=document.createElement('div');e.className='heart';e.textContent='💖';
+  e.style.left=(40+Math.random()*20)+'vw';e.style.fontSize=15+Math.random()*25+'px';
+  e.style.setProperty('--x',(Math.random()*500-250)+'px');e.style.animationDuration=2+Math.random()*3+'s';
+  document.body.appendChild(e);setTimeout(()=>e.remove(),6000);
+ },i*35);
+}
+let ctx=null,playing=false,timer=null;
+function toggleMusic(){
+ const b=document.getElementById('musicBtn');
+ if(!playing){
+  playing=true;b.textContent='🔊';if(!ctx)ctx=new (window.AudioContext||window.webkitAudioContext)();ctx.resume();melody();
+ }else{playing=false;b.textContent='🎵';clearTimeout(timer)}
+}
+function melody(){
+ if(!playing)return;
+ const notes=[261.63,329.63,392,329.63,293.66,349.23,440,349.23],i=Math.floor(Math.random()*notes.length);
+ const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=notes[i];
+ g.gain.setValueAtTime(0,ctx.currentTime);g.gain.linearRampToValueAtTime(.05,ctx.currentTime+.05);g.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+.8);
+ o.connect(g);g.connect(ctx.destination);o.start();o.stop(ctx.currentTime+.9);timer=setTimeout(melody,650);
+}
+hearts();
+</script>
+</body>
+</html>
